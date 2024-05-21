@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900;1,9..40,1000&display=swap');
+.hesabiniz{
+  font-size:1vw;
+}
+
+.body{
+ 
+    font-family: 'DM Sans', sans-serif; 
+}
+
+.logoDiv{
+    width:100%;
+    display:flex;
+    justify-content: center;
+}
+.logoImg{
+    width:20vw;
+    height:10vw;
+}
+.loginForm{
+    display:flex;
+
+    align-items: center;
+    justify-content: center;
+ 
+}
+.loginFormDiv{
+    background: #f8f6f9b9;
+    padding:0 10vw 0;
+}
+.emailinput{
+    width:30vw;
+    height:2vw;
+    border-radius:0.5vw;
+    font-size:1.3vw;
+    padding:1vw;
+    
+    margin-top:3vw;
+    border:transparent;
+}
+.dateinput{
+    width:5vw;
+    height:2vw;
+    border-radius:0.5vw;
+    
+     margin-right:5.5vw;
+    font-size:1.3vw;
+    padding:1vw;
+    
+    margin-top:3vw;
+    border:transparent;
+}
+.pass{
+    width:27vw;
+    height:2vw;
+    border-radius:0.5vw;
+    font-size:1.3vw;
+    padding:1vw;
+    border:transparent;
+    margin-top:2vw;
+    padding-left:4vw;
+    position: relative;
+   z-index:0;
+}
+.keyicon{
+  position:absolute;
+  width:2vw;
+  height:2vw;
+  top:26vw;
+  left:34vw;
+  z-index:1;
+}
+.eye{
+    z-index:1;
+    
+    left:63vw;
+}
+.daxilol{
+    background:#9977F4;
+    color:white;
+    border:transparent;
+    border-radius:5vw;
+    font-size:1.1vw;
+    height:2.5vw;
+    
+    width:8vw;
+    margin-right:5vw;
+    cursor: pointer;
+}
+.qeydiyyat{
+    background:#9977F4;
+    color:white;
+    border:transparent;
+    border-radius:5vw;
+    font-size:1vw;
+    height:2.5vw;
+    width:12vw;
+    margin-left:1vw;
+    cursor: pointer;
+}
+
+.gender{
+    border:white;
+    width:32vw;
+    color:grey;
+    margin-top:2vw;
+    height:3vw;
+    font-size:1.5vw;
+    border-radius:0.5vw;
+}
+
+@media only screen and (max-width: 950px) {
+    .emailinput{
+      width:50vw;
+      height:3.5vw;
+      font-size:3vw;
+    }
+    .logoImg{
+        width:30vw;
+        margin-top:4vw;
+        margin-bottom:3vw;
+    }
+    .pass{
+        width:47vw;
+        height:3.5vw;
+        font-size:3vw;
+    }
+    .keyicon{
+        left:25vw;
+        top:44vw;
+    }
+    .eye{
+        left:73vw;top:44vw;
+    }
+    .daxilol{
+        font-size:2.5vw;
+        width:14vw;
+       margin-right:0vw;
+        height:4vw;
+        margin-bottom:1vw;
+    }
+    .daxiltxt{
+        font-size:5vw;
+    }
+    .logintxt{
+        font-size:2.5vw;
+    }
+    .hesabiniz{
+      font-size:2vw;
+    }
+    .qeydiyyat{
+        font-size:2.5vw;
+        width:20vw;
+        height:6vw;
+    }
+ }
+
