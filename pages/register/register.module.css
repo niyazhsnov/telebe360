@@ -1,157 +1,308 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900;1,9..40,1000&display=swap');
-.hesabiniz{
-  font-size:1vw;
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+.body {
+  font-family: 'DM Sans', sans-serif;
 }
 
-.body{
+.registerPart {
+  background: rgba(248, 246, 249, 0.7);
+  border-radius: 30px;
+  padding: 2vw 10vw 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1vw;
+  position: relative; /* Add position relative for previous button positioning */
+}
+.form_top_div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:10px;
+}
+.form_top_div h2{
+  margin:0;
+  padding:0;
+  font-size:35px;
+}
+.form_top_div p{
+  margin:0;
+  padding:0;
+  font-size:15px;
+
+}
+.form_top_div p a{
+  color:#9977F4;
+}
+.prevbut {
+  position: absolute;
+  top: 2vw;
+  left: 2vw;
+  background-color: #9977F4;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-size: 1.5vw;
+  cursor: pointer;
+}
+#gender{
+  
+}
+.input, .inputFile, .inputSelect, .otpInput {
+  width: 30vw;
+  height: 3vw; /* Set consistent height for all fields */
+  border-radius: 10px;
+  font-size: 1.3vw;
+  padding: 0.5vw 1vw; /* Adjust padding for consistent look */
+  font-family: 'DM Sans', sans-serif;
+  margin-top: 2vw;
  
-    font-family: 'DM Sans', sans-serif; 
+  border: transparent;
+  box-sizing: border-box; /* Ensure padding is included in height */
 }
 
-.logoDiv{
-    width:100%;
-    display:flex;
-    justify-content: center;
+.inputFile {
+  display: none;
 }
-.logoImg{
-    width:20vw;
-    height:10vw;
-}
-.loginForm{
-    display:flex;
 
-    align-items: center;
-    justify-content: center;
- 
+.fileUploadDiv {
+  width: 30vw;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background: white;
+  margin-top: 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.loginFormDiv{
-    background: #f8f6f9b9;
-    padding:0 10vw 0;
+
+.fileUploadLabel {
+  display: flex;
+  flex-direction: column;
+   transform: translate(-9vw,-1vw);
+   
+  color: grey;
+  font-size: 1.4vw;
 }
-.emailinput{
-    width:30vw;
-    height:2vw;
-    border-radius:0.5vw;
-    font-size:1.3vw;
-    padding:1vw;
-    
-    margin-top:3vw;
-    border:transparent;
+
+.uploadIcon {
+  width:21vw;
+  cursor: pointer;
+  margin-bottom:1vw;
+  height:auto;
+  
 }
-.dateinput{
-    width:5vw;
-    height:2vw;
-    border-radius:0.5vw;
-    
-     margin-right:5.5vw;
-    font-size:1.3vw;
-    padding:1vw;
-    
-    margin-top:3vw;
-    border:transparent;
-}
-.pass{
-    width:27vw;
-    height:2vw;
-    border-radius:0.5vw;
-    font-size:1.3vw;
-    padding:1vw;
-    border:transparent;
-    margin-top:2vw;
-    padding-left:4vw;
-    position: relative;
-   z-index:0;
+
+.passwordDiv {
+  position: relative;
+  width: 100%;
 }
 .keyicon{
   position:absolute;
-  width:2vw;
-  height:2vw;
-  top:26vw;
-  left:34vw;
-  z-index:1;
+  top:2.8vw;
+  left:0.8vw;
+  width:1.3vw;
+  height:1.3vw;
+}
+#password_input{
+  padding-left:3vw;
+}
+.eyeIcon {
+  position: absolute;
+  right: 1vw;
+  top: 2.6vw;
+  cursor: pointer;
 }
 .eye{
-    z-index:1;
-    
-    left:63vw;
-}
-.daxilol{
-    background:#9977F4;
-    color:white;
-    border:transparent;
-    border-radius:5vw;
-    font-size:1.1vw;
-    height:2.5vw;
-    
-    width:8vw;
-    margin-right:5vw;
-    cursor: pointer;
-}
-.qeydiyyat{
-    background:#9977F4;
-    color:white;
-    border:transparent;
-    border-radius:5vw;
-    font-size:1vw;
-    height:2.5vw;
-    width:12vw;
-    margin-left:1vw;
-    cursor: pointer;
+  width:1.6vw;
+  height:1.6vw;
 }
 
-.gender{
-    border:white;
-    width:32vw;
-    color:grey;
-    margin-top:2vw;
-    height:3vw;
-    font-size:1.5vw;
-    border-radius:0.5vw;
+.passwordStrengthBar {
+  height: 0.3vw;
+  border-radius: 5px;
+  margin-top: 0.5vw;
 }
 
-@media only screen and (max-width: 950px) {
-    .emailinput{
+.passwordRequirements {
+  font-size: 1vw;
+  list-style-type: none;
+  padding: 0;
+  padding-left:1vw;
+  margin-top: -0.5vw;
+}
+
+.otpDiv {
+  display: flex;
+  gap: 1vw;
+  margin-top: 2vw;
+}
+.registerFormDiv{
+    display:flex;
+    flex-direction: column;
+}
+
+.otpInput {
+  width: 6vw; /* Make OTP fields wider */
+  height: 3vw; /* Consistent height */
+  border-radius: 10px;
+  font-size: 1.3vw;
+  text-align: center;
+  border: transparent;
+  box-sizing: border-box; /* Ensure padding is included in height */
+}
+
+.inputSelect {
+  appearance: none; /* Remove default styling */
+  background-color: white; /* Ensure background is white */
+}
+
+.inputSelect option {
+  color: black; /* Ensure options text is visible */
+}
+
+.nextbut, .submitbut {
+  background-color: #9977F4;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  width:10vw;
+  padding: 5px 20px;
+  margin-top: 70px;
+  font-size: 18px;
+}
+
+.daxiltxt {
+  font-size: 2vw;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 800px) {
+    .registerPart {
+      padding: 8vw 5vw 5vw; /* Yeni padding değerleri */
+      width: 90vw; /* Yeni genişlik */
+      max-width: 400px; /* Maksimum genişlik */
+    }
+  
+    .prevbut {
+      top: 5vw;
+      left: 5vw;
+      font-size: 5vw; /* Daha büyük yazı boyutu */
+      padding: 2vw 4vw; /* Yeni padding değerleri */
+      border-radius: 5vw; /* Daha büyük border-radius */
+    }
+  
+    .input,
+    .inputFile,
+    .otpInput,
+    .inputSelect {
+      width: 80vw;
+      height: 8vw;
+      font-size: 4vw; /* Daha büyük yazı boyutu */
+      padding: 2vw 4vw; /* Yeni padding değerleri */
+      border-radius: 4vw; /* Daha büyük border-radius */
+    }
+  
+    .fileUploadDiv {
+      width: 88vw;
+      height: auto; /* Yeni yükseklik */
+      font-size: 4vw; /* Daha büyük yazı boyutu */
+      border-radius: 4vw; /* Daha büyük border-radius */
+    }
+  
+    .uploadIcon {
+      font-size: 6vw; /* Daha büyük ikon boyutu */
+      margin-top: 2vw;
+    }
+    .fileUploadLabel{
+      font-size:3.5vw;
+      transform: translateX(-27vw);
+    }
+    .nextbut,
+    .submitbut {
+      width: 35vw;
+      height: 10vw;
+      font-size: 4vw; /* Daha büyük yazı boyutu */
+      padding: 2vw 4vw; /* Yeni padding değerleri */
+      border-radius: 4vw; /* Daha büyük border-radius */
+    }
+  
+    .daxiltxt {
+      font-size: 10vw; /* Daha büyük yazı boyutu */
+    }
+  
+    .passwordRequirements {
+      font-size: 4vw; /* Daha büyük yazı boyutu */
+     margin-top:-1vw;
+     margin-left:3vw;
+    }
+    .uploadIcon{
       width:50vw;
-      height:3.5vw;
-      font-size:3vw;
     }
-    .logoImg{
-        width:30vw;
-        margin-top:4vw;
-        margin-bottom:3vw;
+  }
+  @media only screen and (max-width: 800px) {
+    /* Field genişlikleri */
+    .input,
+    .inputSelect {
+      width: 88vw; /* Field genişliği artırıldı */
+      font-size: 4vw; /* Yazı boyutu ayarlandı */
+      padding: 2vw 4vw; 
+      height:12vw;/* Yeni padding değerleri */
+      margin-top:5vw;
+      border-radius: 4vw; /* Border-radius ayarlandı */
     }
-    .pass{
-        width:47vw;
-        height:3.5vw;
-        font-size:3vw;
+  
+    /* Cinsiyyətiniz seçenekleri */
+    .inputSelect {
+      text-align-last: center; /* Option'ların metin hizalaması */
+      direction: rtl; /* Seçeneklerin sağdan sola açılması */
+    }
+  
+    /* OTP field düzenlemeleri */
+    .otpDiv {
+      display: flex;
+      gap: 3vw;
+      margin-top: 4vw; /* Üst boşluk ayarlandı */
+      justify-content: center; /* OTP alanlarını merkeze hizalama */
+    }
+  
+    .otpInput {
+      width: 12vw; /* OTP alanlarının genişliği ayarlandı */
+      height: 8vw; /* OTP alanlarının yüksekliği ayarlandı */
+      font-size: 4vw; /* Yazı boyutu ayarlandı */
+      text-align: center; /* Metin hizalaması ayarlandı */
+    }
+  
+    /* Bulanık renkli div */
+    .registerPart {
+      position: relative;
+      z-index: 1; /* Z-index değeri artırıldı */
+    }
+    .passwordStrengthBar{
+      height:0.7vw; 
     }
     .keyicon{
-        left:25vw;
-        top:44vw;
+      width:4vw;
+      height:auto;
+      top:8vw;
+      left:2vw;
+    }
+    .eyeIcon{
+      top:8vw;
+      right:3vw;
     }
     .eye{
-        left:73vw;top:44vw;
+      width:6vw;
+      height:auto;
     }
-    .daxilol{
-        font-size:2.5vw;
-        width:14vw;
-       margin-right:0vw;
-        height:4vw;
-        margin-bottom:1vw;
+    #password_input{
+      padding-left:8vw;
     }
-    .daxiltxt{
-        font-size:5vw;
-    }
-    .logintxt{
-        font-size:2.5vw;
-    }
-    .hesabiniz{
-      font-size:2vw;
-    }
-    .qeydiyyat{
-        font-size:2.5vw;
-        width:20vw;
-        height:6vw;
-    }
- }
-
+  }
+    

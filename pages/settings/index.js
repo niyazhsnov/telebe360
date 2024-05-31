@@ -22,7 +22,10 @@ export default function Home (){
 
  
         <div className={css.main}>
+         <div className={css.top_div}> 
             <h3>Settings</h3>
+             <Link href='/home'><img src='/X.svg'/></Link>
+         </div>
            <div className={css.mainul}>
       <ul className={css.proful}>
       <div className={css.profdiv}>
@@ -105,7 +108,7 @@ export default function Home (){
         className={css.id360mob}
       />
       <p style={{color:'#0057FF'}}>Technical Support</p>
-      <Link href='/settings/support'> <FaChevronRight style={{color:"#0057FF"}}className={css.chevron}/></Link>
+      <Link href='/technical_support'> <FaChevronRight style={{color:"#0057FF"}}className={css.chevron}/></Link>
         </li>  
         <li className={css.profli} >
         <Image src={'profrefere.svg'}

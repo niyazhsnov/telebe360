@@ -1,4 +1,3 @@
-"use client";
 import React, { useState, useEffect } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import Image from 'next/image';
@@ -6,12 +5,14 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import css from './login.module.css';
-import Slider from '../../components/login_slider/index'
+import Slider from '../../components/login_slider/index';
+import axios from 'axios';
 
 export default function Login() {
   const [passwordVisible, setPasswordVisible] = useState(false);
   const [formData, setFormData] = useState({ email: '', password: '', rememberMe: false });
   const [activeDiv, setActiveDiv] = useState(1);
+  const [token, setToken] = useState('');
 
   useEffect(() => {
     const savedEmail = localStorage.getItem('email');
@@ -23,6 +24,12 @@ export default function Login() {
     }
   }, []);
 
+  useEffect(() => {
+    if (token) {
+      localStorage.setItem('token', token);
+    }
+  }, [token]);
+
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
   };
@@ -32,18 +39,33 @@ export default function Login() {
     setFormData({ ...formData, [name]: type === 'checkbox' ? checked : value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
+    try {
+      const response = await axios.post('https://telebe360.elxanhuseynli.com/api/login-user', {
+        email: formData.email,
+        password: formData.password,
+      });
 
-    if (formData.rememberMe) {
-      localStorage.setItem('email', formData.email);
-      localStorage.setItem('password', formData.password);
-      localStorage.setItem('rememberMe', formData.rememberMe);
-    } else {
-      localStorage.removeItem('email');
-      localStorage.removeItem('password');
-      localStorage.removeItem('rememberMe');
+      console.log(response.data);
+
+      if (formData.rememberMe) {
+        localStorage.setItem('email', formData.email);
+        localStorage.setItem('password', formData.password);
+        localStorage.setItem('rememberMe', formData.rememberMe);
+      } else {
+        localStorage.removeItem('email');
+        localStorage.removeItem('password');
+        localStorage.removeItem('rememberMe');
+      }
+
+      setToken(response.data.token);
+
+      // Redirect or do something else after successful login
+      // Example redirect:
+      // router.push('/dashboard');
+    } catch (error) {
+      console.error('Login error:', error);
     }
   };
 
@@ -52,7 +74,6 @@ export default function Login() {
       <style jsx global>{`
         body {
           background-image: url('/loginback.svg');
-          
           background-size: cover;
           background-repeat: no-repeat;
           background-position: center center;
@@ -127,7 +148,7 @@ export default function Login() {
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '2vw' }}>
                 <label className={css.rememberMe}>
                   <input
-                    type="checkbox"
+                    type="checkbox" 
                     name="rememberMe"
                     className={css.checkbox}
                     checked={formData.rememberMe}
@@ -135,15 +156,16 @@ export default function Login() {
                   />
                   Məni xatırla
                 </label>
-                <a className={css.logintxt} href='/'><i>Şifrəmi unutdum </i></a>
+                <a className={css.logintxt} href='#'><i>Şifrəmi unutdum </i></a>
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '2vw' }}>
-                <Link href='/home'><button className={css.daxilol} type="submit">➜ Daxil ol</button></Link>
+                <button className={css.daxilol} type="submit">➜ Daxil ol</button>
               </div>
             </form>
           </motion.div>
         )}
       </AnimatePresence>
+     
     </div>
   );
 }

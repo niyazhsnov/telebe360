@@ -196,14 +196,12 @@
 
     .emailinput {
         width: 91vw;
-        height: 9vw;
-        font-size: 5vw;
-        margin-right:5vw;
+        height: 8vw;
+        font-size: 3.9vw;
+        padding-left:5vw;
         border-radius:3vw;
     }
-    .slider_div{
-        margin-top:-5vw;
-    }
+    
 
     .logoImg {
         width: 30vw;
@@ -212,34 +210,41 @@
     }
 
     .loginFormDiv{
-        padding:0 1vw 0 10vw;
-        height:175vw;
+        padding:0 2vw 0 2vw;
+        height:100% !important;
+      
     }
     .pass {
-        width: 82vw;
-        height: 9vw;
-        font-size: 5vw;
+        width: 86vw;
+        height: 8vw;
+        font-size: 3.9vw;
         padding-left:10vw;
+         
         border-radius:3vw;
     }
     .keyicon{
-        width:8vw;
-        height:8vw;
+        width:6vw;
+        height:6vw;
+        top:4vw;
+
+        left:2vw;
     }
   
     .eye{
-        width:8vw;
-        right:8vw;
-        height:8vw;
-        top:3.5vw;
+        width:6vw;
+        right:3vw;
+        height:6vw;
+        top:4vw;
+        
     }
       
     .daxiltxt{
        
     }
   .login_top_txt{
-    font-size:4vw;
-    margin-top:5vw;
+    font-size:3.8vw;
+    margin-top:4vw;
+    margin-bottom:2vw;
   }
 
     .daxilol {
@@ -252,7 +257,7 @@
         align-items: center;
         justify-content: center;
         border-radius:2vw;
-        margin-top:370%;
+       margin-top:100%;
     }
 
     .daxiltxt {
@@ -271,14 +276,15 @@
 
     .checkbox {
         appearance: none;
-        width: 8vw;
-        height: 8vw;
-        border: 0.8vw solid black;
+        width: 6vw;
+        height: 6vw;
+        border: 0.5vw solid black;
         border-radius: 3px;
         transition: background-color 0.3s, border-color 0.3s;
         cursor: pointer;
         position: relative;
-        margin-right: 1vw;
+        margin-right: 2vw;
+        margin-left:2.5vw;
         display: flex;
         align-items: center;
       }
@@ -291,14 +297,14 @@
       .checkbox:checked::before {
         content: '';
         display: block;
-        width: 2.5vw;
-        height: 5vw;
+        width: 2vw;
+        height: 3vw;
         border: solid black;
         border-width: 0 1vw 1vw 0;
         transform: rotate(45deg);
         position: absolute;
         top: 0px;
-        left: 6px;
+        left: 5px;
       }
       
       .rememberMe {

@@ -3,9 +3,7 @@
 }
 
 .chevron_div {
-  position: absolute;
-  top: 0;
-  left: -2vw;
+   margin-left:-2vw;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   background: white;
   border-radius: 50%;
@@ -14,7 +12,7 @@
   z-index: 1199;
   align-items: center;
   justify-content: center;
-  margin-top: 22%;
+  
 }
 .bottom_div_img{
   width:25px;
@@ -36,7 +34,7 @@
 }
 
 .layer {
-  background: black;
+     display:none;
 }
 
 .sidebar_360img {
@@ -50,7 +48,8 @@
 }
 
 .logoClosed {
-  transform: translateX(-200%);
+  position:relative;
+  transform: translateX(-90px);
 }
 .mobile_fav{
   display:none;
@@ -58,6 +57,7 @@
 .logoOpen {
   transform: translateX(0);
 }
+
 .navbar{
   display: flex;
   align-items: center;
@@ -66,6 +66,7 @@
 .search{
   display:flex;position: relative;
   align-items: center;
+  margin-left:10px;
 }
 .navbar{
   display:flex;
@@ -141,7 +142,7 @@
     
   }
   .search_input{
-    width:40vw;
+    width:50vw;
     height:40px;
     margin-left:5px;
     font-size:17px;
@@ -167,6 +168,15 @@
     margin-left:5px;
     margin-right:5px;
   }
+  .chevron_div{
+    margin-top:90vw;
+    margin-left:-16vw;
+    width:25vw;
+    height:18vw;
+  }
+  .chevron_icon{
+        margin-right:-13vw;
+  }
   .sidebar {}
 }
 
@@ -179,5 +189,8 @@
 @media (max-width: 600px) {
   .chevron_div.closed {
     display: none;
+  }
+  .layer{
+    display:block;
   }
 }

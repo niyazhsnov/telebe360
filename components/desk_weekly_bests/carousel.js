@@ -26,7 +26,7 @@ export default function Slider(){
         )
     }
 useKeyboardArrows={true}
-swipeable={true}
+swipeable={false}
 
 showStatus={false}
 showThumbs={false}
@@ -34,9 +34,9 @@ autoPlay={false}
 infiniteLoop={false}
 
 showArrows={true}
-emulateTouch={true}
+emulateTouch={false}
 swipeScrollTolerance={100}
-thumbWidth={100}
+thumbWidth={0}
 interval={5000}
 transitionTime={1500}
 showIndicators={false}
