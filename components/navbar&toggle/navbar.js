@@ -181,7 +181,7 @@ export default function MiniDrawer() {
               <Link href='/tickets'><img src='/tiicket.svg' className={css.ticket_logo} /></Link>
               <Notification />
             </div>
-            <span>
+            <span className={css.profile}>
               <Profile /></span>
           </div>
         </Toolbar>
@@ -194,13 +194,13 @@ export default function MiniDrawer() {
       />
       <Box>
         <Drawer sx={{}} variant="permanent" open={open} className={css.sidebar}>
-          <div className={`${css.logo} ${open ? css.logoOpen : css.logoClosed}`}>
+          <span className={`${css.logo} ${open ? css.logoOpen : css.logoClosed}`}>
             <Image className={css.sidebar_360img} width={0} height={0} src='/wide360logo.svg' />
-          </div>
+          </span>
           <div><Categories className={css.category} /></div>
           <div className={css.sidebar_bottom_div}>
             <Link href='/settings'><img src='/settings.svg' className={css.bottom_div_img} /></Link>
-            <Link href=''><img src='/contact.svg' className={css.bottom_div_img} /></Link>
+            <Link href='/technical_support'><img src='/contact.svg' className={css.bottom_div_img} /></Link>
             <span><Logout /></span>
           </div>
         </Drawer>

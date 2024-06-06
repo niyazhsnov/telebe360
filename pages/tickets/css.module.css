@@ -3,10 +3,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+   
 
 }
 .ticket_ul{
-    width:90%;
+   width:90vw;
+    display:flex;
+    flex-direction: column;
+    gap:1vw;
 }
 .ticket_li{
     background:white;
@@ -52,9 +56,18 @@
     padding:10px 20px 10px 20px
 }
 @media only screen and (max-width: 800px){
+    .ticket_div{
+        position:absolute;
+    left:8%;
+    top:15vw;
+   
+    
+    }
     .ticket_ul{
        margin:0;
        padding:0;
+       width:105vw;
+       gap:6vw;
     }
     .ticket_li{
         border-radius:3vw;

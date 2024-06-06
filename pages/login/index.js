@@ -159,7 +159,7 @@ export default function Login() {
                 <a className={css.logintxt} href='#'><i>Şifrəmi unutdum </i></a>
               </div>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '2vw' }}>
-                <button className={css.daxilol} type="submit">➜ Daxil ol</button>
+             <button className={css.daxilol} type="submit">  <a href='/home' style={{color:'white'}}>➜ Daxil ol</a> </button>
               </div>
             </form>
           </motion.div>

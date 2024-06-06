@@ -319,6 +319,10 @@
         text-decoration:underline;
         font-weight: 500;
       }
+      .nextbut{
+       margin-top:10px;
+       margin-left:10px;
+      }
 }
 
 

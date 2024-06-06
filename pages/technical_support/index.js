@@ -22,35 +22,35 @@ export default function Home() {
           <div className={styles.formGroup}>
             <label className={styles.label}>Name</label>
             <div className={styles.inputGroup}>
-              <input className={styles.input} type="text" placeholder="Adınız" />
-              <input className={styles.input} type="text" placeholder="Soyadınız" />
+              <input className={styles.input} id={styles.ad_soyad} type="text" placeholder="Adınız" />
+              <input className={styles.input}  id={styles.ad_soyad} type="text" placeholder="Soyadınız" />
             </div>
           </div>
           <div className={styles.formGroup}>
-            <label className={styles.label}>Email</label>
+            <label className={styles.label} >Email</label>
             <div className={styles.inputGroup}>
-              <input className={styles.input} type="email" placeholder="Email adresiniz" />
+              <input className={styles.input} id={styles.email} type="email" placeholder="Email adresiniz" />
             </div>
           </div>
           <div className={styles.formGroup}>
             <label className={styles.label}>Nömrə</label>
             <div className={styles.inputGroup}>
-              <select className={styles.select}>
+              <select className={styles.select} id={styles.prefix}>
                 <option value="055">055</option>
                 <option value="070">070</option>
                 <option value="050">050</option>
                 <option value="099">099</option>
               </select>
-              <input className={styles.input} type="text" placeholder="123 45 67" />
+              <input className={styles.input} id={styles.number} type="text" placeholder="123-45-67" />
             </div>
           </div>
-          <div className={styles.formGroup}>
-            <label className={styles.label}>Sual və ya Şikayətiniz</label>
+          <div className={styles.formGroup}  id={styles.last_group}>
+            <label className={styles.label} id={styles.textlabel}>Sual və ya Şikayətiniz</label>
             <div className={styles.inputGroup}>
               <textarea className={styles.textarea} placeholder="Buraya yazınız..."></textarea>
             </div>
           </div>
-          <button className={styles.button} type="submit">Göndər</button>
+          <button className={styles.button} id={styles.button}type="submit">Göndər</button>
         </form>
       </div>
     );

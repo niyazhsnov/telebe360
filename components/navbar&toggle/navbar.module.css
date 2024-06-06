@@ -40,16 +40,17 @@
 .sidebar_360img {
   width: 170px;
   height: auto;
+ 
 }
 
 .logo {
   transition: transform 0.2s ease-in-out;
-  margin-left: 0.6vw;
+  position:sticky;
+ 
 }
 
 .logoClosed {
-  position:relative;
-  transform: translateX(-90px);
+    transform: translateX(-85px);
 }
 .mobile_fav{
   display:none;
@@ -192,5 +193,18 @@
   }
   .layer{
     display:block;
+  }
+  .profile{
+    margin-left:2vw;
+  }
+}
+@media only screen and (min-width: 800px){
+   .search{
+    margin-left:-400px;
+   }
+}
+@media only screen and (min-width: 2340px){
+  .logoClosed{
+    transform: translateX(-90px);
   }
 }
