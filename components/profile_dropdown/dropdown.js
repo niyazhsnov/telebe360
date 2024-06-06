@@ -36,11 +36,11 @@ export default function BasicMenu() {
           'aria-labelledby': 'basic-button',
         }} className={css.bulanik}
       >
-        <MenuItem className={css.dropdown_li} onClick={handleClose}><img src='/dropdown_id.svg' className={css.dropdownbtn}/> <p className={css.dropdownp}>My360ID</p><img className={css.chevron} src='/chevroncol.svg'/></MenuItem>
-        <MenuItem  className={css.dropdown_li}  onClick={handleClose}><img src='/dropdown_360.svg' className={css.dropdownbtn}/><p className={css.dropdownp}>360+</p><img className={css.chevron} src='/chevroncol.svg'/></MenuItem>
-        <MenuItem  className={css.dropdown_li}  onClick={handleClose}><img src='/dropdown_settings.svg' className={css.dropdownbtn}/><p className={css.dropdownp}>Settings</p><img className={css.chevron} src='/chevroncol.svg'/></MenuItem>
-        <MenuItem  className={css.dropdown_li}  onClick={handleClose}><img src='/dropdown_support.svg' className={css.dropdownbtn}/><p className={css.dropdownp}>Support</p><img className={css.chevron} src='/chevroncol.svg'/></MenuItem>
-        <MenuItem id={css.logout_li}  className={css.dropdown_li}  onClick={handleClose}><img src='/dropdown_signout.svg' id={css.logoutbtn} className={css.dropdownbtn}/><p id={css.logoutp} className={css.dropdownp}>Sign Out</p><img id={css.logoutchevron} className={css.chevron} src='/chevroncol.svg'/></MenuItem>
+      <a href='/settings/my360id' className={css.a}>  <MenuItem className={css.dropdown_li} onClick={handleClose}><img src='/dropdown_id.svg' className={css.dropdownbtn}/> <p className={css.dropdownp}>My360ID</p><img className={css.chevron} src='/chevroncol.svg'/></MenuItem></a>
+       <a href='/coming_soon' className={css.a}> <MenuItem  className={css.dropdown_li}  onClick={handleClose}><img src='/dropdown_360.svg' className={css.dropdownbtn}/><p className={css.dropdownp}>360+</p><img className={css.chevron} src='/chevroncol.svg'/></MenuItem></a>
+        <a href='/settings' className={css.a}><MenuItem  className={css.dropdown_li}  onClick={handleClose}><img src='/dropdown_settings.svg' className={css.dropdownbtn}/><p className={css.dropdownp}>Settings</p><img className={css.chevron} src='/chevroncol.svg'/></MenuItem></a>
+       <a href='/technical_support' className={css.a}> <MenuItem  className={css.dropdown_li}  onClick={handleClose}><img src='/dropdown_support.svg' className={css.dropdownbtn}/><p className={css.dropdownp}>Support</p><img className={css.chevron} src='/chevroncol.svg'/></MenuItem></a>
+      <MenuItem id={css.logout_li}  className={css.dropdown_li}  onClick={handleClose}><img src='/dropdown_signout.svg' id={css.logoutbtn} className={css.dropdownbtn}/><p id={css.logoutp} className={css.dropdownp}>Sign Out</p><img id={css.logoutchevron} className={css.chevron} src='/chevroncol.svg'/></MenuItem>
         
       </Menu>
     </div>

@@ -13,6 +13,7 @@ const style = {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
+  justifyContent:'center',
   top: '35%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
